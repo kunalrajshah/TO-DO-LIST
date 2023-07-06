@@ -134,15 +134,54 @@ ul li.checked::before{
 }
 
 /* Adjustments for medium screens */
-@media (min-width: 481px) and (max-width: 768px) {
+/* Add responsive styles here */
+
+/* Adjustments for small screens */
+@media (max-width: 576px) {
+  .container {
+    margin: 50px 10px;
+  }
+
+  .todo-app {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .todo-app h1 {
+    font-size: 20px;
+  }
+
+  .row {
+    flex-direction: column;
+    margin-top: 20px;
+  }
+
+  #task {
+    margin-bottom: 10px;
+  }
+}
+
+/* Adjustments for medium screens */
+@media (min-width: 577px) and (max-width: 768px) {
+  .container {
+    margin: 50px 20px;
+  }
+
   .todo-app {
     width: 70%;
+    padding: 30px;
   }
 }
 
 /* Adjustments for large screens */
 @media (min-width: 769px) {
+  .container {
+    margin: 50px auto;
+    max-width: 1200px;
+  }
+
   .todo-app {
     width: 50%;
+    padding: 40px;
   }
 }
