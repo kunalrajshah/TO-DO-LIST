@@ -1,0 +1,148 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins',sans-serif;
+}
+
+body{
+  background-image: url(to-do-list-1680x880.avif);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.todo-app
+{
+  border: 2px solid pink;
+  /* background-color:rgba(255, 255, 255, -0.6);     for transparent background */
+  background-color: #fff;
+  margin: 95px 25px 20px;
+  width: 30%;
+  border-radius: 10px;
+  padding: 20px 30px 70px;
+}
+
+.todo-app h1{
+  font-size: 25px;
+  color: #00317f;
+}
+
+.todo-app img{
+  width: 40px;
+  height:50px;
+}
+
+/* input text and btn css */
+.row
+{
+  display: flex;
+  align-items: center;
+  background:#edeef0;
+  border-radius:40px;
+}
+#task{
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 10px;
+  font-weight: 14px;
+}
+
+#task placeholder{
+  user-select: none;
+}
+
+#btn{
+ border: none;
+ outline: none;
+ padding: 16px 50px;
+ background: #ff5945;
+ color: #fff;
+ font-size: 16px;
+ cursor: pointer;
+ border-radius: 40px;
+}
+
+/* Adding css on list item */
+ul li{
+  list-style: none;
+  font-size: 17px;
+  padding: 15px 8px 12px 50px;
+  /* use for not highlight when we double click on text */
+  user-select: none; 
+  cursor: pointer;
+  position: relative;
+}
+
+/* adding uncheck circle before list */
+/* used before property because i have to add circle before ul li */
+ul li::before{
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(unch.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left:8px;
+}
+
+/* adding checked css */
+.checked{
+  color:red;
+  text-decoration:line-through;
+}
+
+     /* adding checked image in circle*/
+ul li.checked::before{
+  background-image: url(check.jpg);
+}
+
+
+/* Adding css on Error message */
+.msg{
+  background-color: rgb(235, 74, 74);
+  font-size: 12px;
+  width:130px;
+  padding: 10px;
+  font-weight: bold;
+  border-radius: 30px;
+  user-select: none;
+  margin-bottom: 2%;
+}
+
+/*  Adding css On delete Button */
+.del{
+  background-color:transparent;
+  float: right;
+  text-align: center;
+  cursor: pointer;
+  width: 4%;
+  border-radius:5px;
+  border: none;
+  color: red;
+  font-size:20px;
+  width: 30px;
+  height:30px;
+}
+
+.del:hover{
+  background-color: #edeef0; 
+}
+
+/* Adjustments for medium screens */
+@media (min-width: 481px) and (max-width: 768px) {
+  .todo-app {
+    width: 70%;
+  }
+}
+
+/* Adjustments for large screens */
+@media (min-width: 769px) {
+  .todo-app {
+    width: 50%;
+  }
+}
